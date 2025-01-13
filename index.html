@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toko Online - Dark Theme</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Toko Online</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#" onclick="showHome()">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="showProducts()">Produk</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="showCart()">Keranjang</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="showContact()">Kontak</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <div id="main-content" class="container-fluid mt-5 pt-5">
+    <!-- Home Page -->
+    <section id="home" class="page">
+      <div class="row text-center">
+        <div class="col-12">
+          <img src="images/welcome.png" alt="Selamat datang di Toko Online" class="img-fluid mb-4" style="max-width: 300px;">
+          <h1 class="display-4 text-light">Selamat datang di Toko Online!</h1>
+          <p class="lead text-light">Nikmati berbagai produk berkualitas dengan harga terbaik!</p>
+          <button class="btn btn-primary btn-lg" onclick="showProducts()">Lihat Produk</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Page -->
+    <section id="products" class="page" style="display: none;">
+      <h2 class="text-center text-light">Produk Kami</h2>
+      <div class="row d-flex justify-content-center align-items-stretch">
+        <!-- Produk 1 -->
+        <div class="col-md-3 mb-4">
+          <div class="card text-center bg-dark text-light">
+            <img src="images/kaos.jpg" class="card-img-top" alt="Produk 1">
+            <div class="card-body">
+              <h5 class="card-title">Kaos polos</h5>
+              <p class="card-text">Harga: Rp 100,000</p>
+              <button class="btn btn-success" onclick="addToCart('Produk 1', 100000, 'images/kaos.jpg')">Tambahkan ke Keranjang</button>
+            </div>
+          </div>
+        </div>
+        <!-- Produk 2 -->
+        <div class="col-md-3 mb-4">
+          <div class="card text-center bg-dark text-light">
+            <img src="images/kosmetik.jpg" class="card-img-top" alt="Produk 2">
+            <div class="card-body">
+              <h5 class="card-title">Kosmetik multifungsi</h5>
+              <p class="card-text">Harga: Rp 150,000</p>
+              <button class="btn btn-success" onclick="addToCart('Produk 2', 150000, 'images/kosmetik.jpg')">Tambahkan ke Keranjang</button>
+            </div>
+          </div>
+        </div>
+        <!-- Produk 3 -->
+        <div class="col-md-3 mb-4">
+          <div class="card text-center bg-dark text-light">
+            <img src="images/earphone.jpg" class="card-img-top" alt="Produk 3">
+            <div class="card-body">
+              <h5 class="card-title">Headset Type C</h5>
+              <p class="card-text">Harga: Rp 75,000</p>
+              <button class="btn btn-success" onclick="addToCart('Produk 3', 75000, 'images/earphone.jpg')">Tambahkan ke Keranjang</button>
+            </div>
+          </div>
+        </div>
+        <!-- Produk 4 -->
+        <div class="col-md-3 mb-4">
+          <div class="card text-center bg-dark text-light">
+            <img src="images/kopi.jpg" class="card-img-top" alt="Produk 4">
+            <div class="card-body">
+              <h5 class="card-title">Biji kopi kemasan</h5>
+              <p class="card-text">Harga: Rp 130,000</p>
+              <button class="btn btn-success" onclick="addToCart('Produk 4', 130000, 'images/kopi.jpg')">Tambahkan ke Keranjang</button>
+            </div>
+          </div>
+        </div>
+        <!-- Produk 5 -->
+        <div class="col-md-3 mb-4">
+          <div class="card text-center bg-dark text-light">
+            <img src="images/chopper.jpg" class="card-img-top" alt="Produk 5">
+            <div class="card-body">
+              <h5 class="card-title">Chopper</h5>
+              <p class="card-text">Harga: Rp 300,000</p>
+              <button class="btn btn-success" onclick="addToCart('Produk 5', 300000, 'images/chopper.jpg')">Tambahkan ke Keranjang</button>
+            </div>
+          </div>
+        </div>
+        <!-- Produk 6 -->
+        <div class="col-md-3 mb-4">
+          <div class="card text-center bg-dark text-light">
+            <img src="images/tas.jpg" class="card-img-top" alt="Produk 6">
+            <div class="card-body">
+              <h5 class="card-title">Tas ransel</h5>
+              <p class="card-text">Harga: Rp 244,000</p>
+              <button class="btn btn-success" onclick="addToCart('Produk 6', 244000, 'images/tas.jpg')">Tambahkan ke Keranjang</button>
+            </div>
+          </div>
+        </div>
+        <!-- Produk 7 -->
+        <div class="col-md-3 mb-4">
+          <div class="card text-center bg-dark text-light">
+            <img src="images/humidifire.jpg" class="card-img-top" alt="Produk 7">
+            <div class="card-body">
+              <h5 class="card-title">Humidifire pengharum ruangan</h5>
+              <p class="card-text">Harga: Rp 170,000</p>
+              <button class="btn btn-success" onclick="addToCart('Produk 7', 170000, 'images/humidifire.jpg')">Tambahkan ke Keranjang</button>
+            </div>
+          </div>
+        </div>
+        <!-- Produk 8 -->
+        <div class="col-md-3 mb-4">
+          <div class="card text-center bg-dark text-light">
+            <img src="images/laptop.jpg" class="card-img-top" alt="Produk 8">
+            <div class="card-body">
+              <h5 class="card-title">Laptop</h5>
+              <p class="card-text">Harga: Rp 7,000,000</p>
+              <button class="btn btn-success" onclick="addToCart('Produk 8', 7000000, 'images/laptop.jpg')">Tambahkan ke Keranjang</button>
+            </div>
+          </div>
+        </div>
+        <!-- Produk 9 -->
+        <div class="col-md-3 mb-4">
+          <div class="card text-center bg-dark text-light">
+            <img src="images/kulkas.jpg" class="card-img-top" alt="Produk 9">
+            <div class="card-body">
+              <h5 class="card-title">Kulkas 2 pintu</h5>
+              <p class="card-text">Harga: Rp 3,699,000</p>
+              <button class="btn btn-success" onclick="addToCart('Produk 9', 3699000, 'images/kulkas.jpg')">Tambahkan ke Keranjang</button>
+            </div>
+          </div>
+        </div>
+        <!-- Produk 10 -->
+        <div class="col-md-3 mb-4">
+          <div class="card text-center bg-dark text-light">
+            <img src="images/sepatu.jpg" class="card-img-top" alt="Produk 10">
+            <div class="card-body">
+              <h5 class="card-title">Sepatu Sneakers</h5>
+              <p class="card-text">Harga: Rp 360,000</p>
+              <button class="btn btn-success" onclick="addToCart('Produk 10', 360000, 'images/sepatu.jpg')">Tambahkan ke Keranjang</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cart Page -->
+    <!-- Cart Page -->
+    <section id="cart" class="page" style="display: none;">
+    <h2 class="text-center text-light">Keranjang Belanja</h2>
+    <div id="cart-items" class="text-center text-light">
+      <p>Keranjang Anda kosong.</p>
+    </div>
+    <button class="btn btn-primary" onclick="showProducts()">Lanjutkan Belanja</button>
+    <button id="checkout-button" class="btn btn-success" style="display: none;" onclick="checkout()">Checkout</button>
+  </section>
+  
+
+    <!-- Contact Page -->
+    <section id="contact" class="page" style="display: none;">
+      <h2 class="text-center text-light">Kontak Kami</h2>
+      <p class="text-center text-light">Jika Anda memiliki pertanyaan, silakan hubungi kami melalui:</p>
+      <p class="text-center text-light">Email: <a href="mailto:support@toko.com" class="text-primary">support@toko.com</a></p>
+      <p class="text-center text-light">Telepon: 0812-3456-7890</p>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light text-center py-3">
+    <p>&copy; 2025 Toko Online. Semua Hak Cipta Dilindungi</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
